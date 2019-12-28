@@ -1,10 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
+import App from 'pages/app/app';
 
 const init = (): void => {
-  render(<div>Hello</div>,
-    document.querySelector(`#app`),
-  );
+  render(<App />, document.querySelector('#app'));
 };
 
 init();
