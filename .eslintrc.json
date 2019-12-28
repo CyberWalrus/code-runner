@@ -11,9 +11,16 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "project": "./tsconfig.json"
+    "project": [
+      "./packages /**/tsconfig.json",
+      "./tsconfig.json"
+    ]
   },
-  "extends": ["airbnb-typescript","plugin:@typescript-eslint/recommended", "prettier"],
+  "extends": [
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "plugins": [
     "import",
     "react",
@@ -25,14 +32,24 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true 
+      }
     }
   },
   "rules": {
-    "prettier/prettier": ["error"],
-    "import/prefer-default-export": 0,    
+    "prettier/prettier": [
+      "error"
+    ],
+    "import/prefer-default-export": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "import/no-unresolved": "off",
+    "import/no-unresolved": "error",
     "max-len": [
       "error",
       120,

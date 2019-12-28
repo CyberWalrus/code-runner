@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-const App: FunctionComponent = () => {
+export const App: FunctionComponent = () => {
   return <div>Hello</div>;
 };
 
