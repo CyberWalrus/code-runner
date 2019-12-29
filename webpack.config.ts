@@ -35,22 +35,22 @@ const webpackConfig = {
         test: /\.scss$/,
         use: [
           {
-            loader: `file-loader`,
+            loader: 'file-loader',
             options: {
-              name: `css/[name].css`
+              name: 'css/[name].css'
             }
           },
           {
-            loader: `extract-loader`
+            loader: 'extract-loader'
           },
           {
-            loader: `css-loader?-url`
+            loader: 'css-loader?-url'
           },
           {
-            loader: `postcss-loader`
+            loader: 'postcss-loader'
           },
           {
-            loader: `sass-loader`
+            loader: 'sass-loader'
           }
         ]
       }

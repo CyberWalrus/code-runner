@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react';
+import './app.scss';
 
 export const App: FunctionComponent = () => {
-  return <div>Hello</div>;
+  return <div className="app">Hello</div>;
 };
 
 export default App;
